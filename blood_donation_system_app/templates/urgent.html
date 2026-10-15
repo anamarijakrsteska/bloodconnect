@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!-- BLOOD NEEDS -->
+<div class="position-relative">
+
+    <img src="/media/blood_donation2.jpg"
+         alt="Blood donation"
+         class="img-fluid w-100"
+         style="height: 55vh; object-fit: cover;">
+
+    <div class="position-absolute"
+         style="left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 650px;">
+
+        <h5 style="color: #C50000; letter-spacing: 1px;">
+            <b>BLOOD NEEDS</b>
+        </h5>
+
+        <h1 style="color: #0e1395;">
+            Give blood.<br>
+            <span style="color: #C50000;">
+                Save lives.
+            </span>
+        </h1>
+
+        <img src="/media/golden_line.png"
+             alt="Golden Line">
+
+        <p style="color: #0e1395;line-height: 1.7;">
+            BloodConnect informs you in real time where and
+            which blood type is needed the most, making the
+            connection between donors and pacients more efficient.
+        </p>
+
+    </div>
+</div>
+{% endblock %}

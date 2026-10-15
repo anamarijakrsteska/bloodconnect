@@ -1,0 +1,155 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<!-- COVER -->
+<div class="position-relative">
+
+    <img src="/media/blood_donation2.jpg"
+         alt="Blood donation"
+         class="img-fluid w-100"
+         style="height: 55vh; object-fit: cover;">
+
+    <div class="position-absolute"
+         style="left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 650px;">
+
+        <h5 style="color: #C50000; letter-spacing: 1px;">
+            <b>CAMPAIGNS</b>
+        </h5>
+
+        <h1 style="color: #0e1395;">
+            Connecting people.<br>
+            <span style="color: #C50000;">
+                Saving lives.
+            </span>
+        </h1>
+
+        <img src="/media/golden_line.png"
+             alt="Golden Line">
+
+        <p style="color: #0e1395;line-height: 1.7;">
+            BloodConnect makes blood donation and saving lives
+            easier, while connecting you to same-minded people.
+        </p>
+    </div>
+</div>
+
+
+<!-- CAMPAIGNS -->
+<div class="campaigns py-4" style="background-color: #f8f9fa;">
+    <div class="container">
+
+        <!-- Title -->
+        <div class="text-center mb-4 p-3">
+
+            <h2 style="color: #0e1395;">
+                Campaigns
+            </h2>
+
+            <p class="text-muted mb-0">
+                Discover campaigns that bring people together to save lives.
+            </p>
+
+        </div>
+
+        <!-- ==================== FILTER ==================== -->
+        <div class="d-flex mb-4 justify-content-end">
+            <form method="get" class="d-flex align-items-center gap-2">
+                <label for="city" class="mb-0">
+                    <b>Filter by city:</b>
+                </label>
+
+                <select name="city"
+                        id="city"
+                        class="form-select"
+                        style="width: 200px;"
+                        onchange="this.form.submit()">
+                    <option value="">All Cities</option>
+
+                    {% for value, label in city_choices %}
+                        <option value="{{ value }}"
+                                {% if selected_city == value %}selected{% endif %}>
+                            {{ label }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        <!-- Campaigns -->
+        <div class="row g-5">
+
+            {% for campaign in campaigns %}
+            <div class="col-12 col-md-4">
+
+                <div class="border rounded-3 bg-white shadow-sm h-100">
+
+                    <!-- Image -->
+                    <div class="text-center m-4">
+                        <a href="{% url 'blood_donation_system_app:campaign_detail' campaign.id %}">
+                            <img src="{{ campaign.image.url }}"
+                                 alt="{{ campaign.title }}"
+                                 class="img-fluid rounded-4 hover-image w-100"
+                                 style="height: 330px; object-fit: cover;">
+                            </a>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="m-4">
+                        <a href="{% url 'blood_donation_system_app:campaign_detail' campaign.id %}"
+                            class="text-decoration-none">
+                            <h4 style="color: #C50000;">
+                            {{ campaign.title }}
+                            </h4>
+                        </a>
+
+                        {% if campaign.slogan %}
+                            <h6 style="color: #C50000;">
+                                <b>{{ campaign.slogan }}</b>
+                            </h6>
+                        {% endif %}
+
+                        <p style="color: #0e1395;">
+                            Organizer: <b>{{ campaign.organizer }}</b>
+                        </p>
+
+                        <!-- Date -->
+                        <p class="mb-0">
+                            {% if campaign.date_start == campaign.date_end %}
+                                {{ campaign.date_start|date:"F d, Y" }}
+                            {% else %}
+                                {{ campaign.date_start|date:"F d, Y" }}
+                                -
+                                {{ campaign.date_end|date:"F d, Y" }}
+                            {% endif %}
+                        </p>
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div>
+                                <p class="mb-1">
+                                    <b>{{ campaign.city }}</b>
+                                </p>
+                            </div>
+
+                            <!-- View Details -->
+                            <div>
+                                <a href="{% url 'blood_donation_system_app:campaign_detail' campaign.id %}"
+                                    class="btn text-white hover-button"
+                                    style="background-color: #0e1395;">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock%}

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- ==================== ELIGIBILITY ==================== -->
+<div class="position-relative">
+
+    <img src="/media/blood_donation2.jpg"
+         alt="Blood donation"
+         class="img-fluid w-100"
+         style="height: 55vh; object-fit: cover;">
+
+    <div class="position-absolute"
+         style="left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 650px;">
+
+        <h5 style="color: #0e1395; letter-spacing: 1px;">
+            <b>ELIGIBILITY</b>
+        </h5>
+
+        <h1 style="color: #0e1395;">
+                Are you eligible<br>to donate blood?<br>
+            <span style="color: #0e1395;">
+            </span>
+        </h1>
+
+        <img src="/media/golden_line.png"
+             alt="Golden Line">
+
+        <p style="color: #0e1395;line-height: 1.7; width: 80%;">
+            Check the basic requirements and find out if you can give blood.
+        </p>
+
+    </div>
+
+</div>
+<!-- ==================== ELIGIBILITY ==================== -->
+<div class="eligibility" style="background-color: #f8f9fa;">
+    <div class="container py-4 px-5">
+
+        <!-- Title -->
+        <div class="text-center"
+            style="color: #0e1395;">
+            <h2 class="mb-2">Eligibility</h2>
+            <p class="mb-0">
+                Donate safely. Donate responsibly. Help save lives.
+            </p>
+        </div>
+
+        <!-- Eligibility -->
+        <div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ==================== CALL TO ACTION ==================== -->
+<div class="position-relative">
+
+    <img src="/media/footer.png"
+         alt="Blood donation"
+         class="img-fluid w-100"
+         style="height: 53vh; object-fit: cover;">
+
+    <div class="position-absolute"
+         style="left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 700px;">
+
+        <h5 style="color: #0e1395;">
+            <b>Ready to Save Lives?</b>
+        </h5>
+
+        <h3 class="py-1" style="color: #C50000;">
+            Donate Blood
+        </h3>
+
+        <p style="color: #0e1395;">
+            Every blood donation can make a meaningful difference in someone’s life.
+            If you meet the eligibility requirements, your one donation can save more lives.
+        </p>
+
+        <p style="color: #0e1395;">
+            <a href="{% url 'blood_donation_system_app:urgent' %}"
+               style="color: #0e1395;">
+                <b>Urgent Needs</b>
+            </a>
+            — see where your donation is needed the most.
+        </p>
+
+        <p style="color: #0e1395;">
+            <a href="{% url 'blood_donation_system_app:locations' %}"
+               style="color: #0e1395;">
+                <b>Locations</b>
+            </a>
+            — find a blood donation center near you.
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

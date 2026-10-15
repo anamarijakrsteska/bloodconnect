@@ -1,0 +1,422 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- About BloodConnect → What We Do → Our Mission → Who We Serve → Final CTA -->
+
+<!-- ==================== ABOUT ==================== -->
+<div class="position-relative">
+
+    <img src="/media/about2.png"
+         alt="Blood donation"
+         class="img-fluid w-100"
+         style="height: 55vh; object-fit: cover;">
+
+    <div class="position-absolute"
+         style="left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 650px;">
+
+        <h5 style="color: #0e1395; letter-spacing: 1px;">
+            <b>ABOUT BLOODCONNECT</b>
+        </h5>
+
+        <h1 style="color: #0e1395;">
+            Connecting people.<br>
+            <span style="color: #0e1395;">
+                Saving lives.
+            </span>
+        </h1>
+
+        <img src="/media/golden_line.png"
+             alt="Golden Line">
+
+        <p style="color: #0e1395;line-height: 1.7; width: 80%;">
+            BloodConnect makes blood donation information easier to
+            access and helps connect donors with opportunities to make
+            a difference.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- ==================== WHAT IS BLOODCONNECT ==================== -->
+<div class="container py-5">
+
+    <!-- ====================  TITLE ==================== -->
+    <div class="text-center mb-5">
+        <h3 style="color: #0e1395;">
+            What is BloodConnect?
+        </h3>
+        <p class="text-secondary mx-auto"
+           style="max-width: 800px; line-height: 1.8;">
+                BloodConnect is a web-based information system designed to
+                make information about blood donation across North Macedonia more accessible and
+                organized. It brings important blood donation information
+                together in one place, helping people find the information
+                they need before donating blood.
+        </p>
+    </div>
+
+    <!-- ==================== OUR MOTO and OUR MISSION ==================== -->
+    <div class="row align-items-center g-5 mb-5">
+
+        <!-- Image -->
+        <div class="col-12 col-md-5 text-center">
+            <img src="/media/images.jpg"
+                 alt="Blood donation"
+                 class="img-fluid rounded-4 shadow"
+                 style="width: 100%; max-width: 430px;">
+
+        </div>
+
+        <!-- Text -->
+        <div class="col-12 col-md-7">
+
+            <!-- Out Moto -->
+            <h3 style="color: #0e1395;">
+                Our Moto
+            </h3>
+            <h5 class="text-secondary"
+               style="line-height: 1.8;">
+                A little time of yours, a lifetime for someone else.
+            </h5>
+
+            <!-- Out Mission -->
+            <h3 class="mt-4"
+                style="color: #0e1395;">
+                Our Mission
+            </h3>
+            <p class="text-secondary"
+               style="line-height: 1.8;">
+                Our mission is to encourage voluntary blood donation
+                by providing clear, accessible and useful information
+                to potential and existing blood donors.
+            </p>
+            <p class="text-secondary"
+               style="line-height: 1.8;">
+                BloodConnect aims to make it easier for people to
+                understand blood donation, check whether they are
+                eligible to donate, discover donation locations and
+                stay informed about current blood needs and campaigns.
+            </p>
+        </div>
+    </div>
+
+    <!-- ==================== WHAT WE PROVIDE ==================== -->
+    <div class="text-center mb-3 pt-3">
+
+        <h3 style="color: #0e1395;">
+            What We Provide
+        </h3>
+
+        <p class="text-secondary">
+            Everything you need to get informed and get involved.
+        </p>
+
+    </div>
+
+    <!-- Icons -->
+    <div class="row g-4 mb-5 mt-3">
+
+        <!-- Eligibility -->
+        <div class="col-12 col-sm-6 col-lg-3">
+
+            <div class="border rounded-3 p-4 text-center h-100">
+
+                 <img src="/media/eligibility.png"
+                 alt="Eligibility"
+                 class="img-fluid"
+                 style="height: 55px; width: 55px;">
+
+            <h5 class="mt-3">
+                <a href="{% url 'blood_donation_system_app:eligibility' %}"
+                   class="text-decoration-none"
+                   style="color: #0e1395;">
+                        Check Eligibility
+                </a>
+            </h5>
+
+                <p class="text-secondary mb-0">
+                    Learn about the basic requirements for becoming
+                    a blood donor.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- Locations -->
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="border rounded-3 p-4 text-center h-100">
+
+                <img src="/media/blood-bank.png"
+                 alt="Blood Bank"
+                 class="img-fluid"
+                 style="height: 55px; width: 55px;">
+
+            <h5 class="mt-3">
+                <a href="{% url 'blood_donation_system_app:locations' %}"
+                   class="text-decoration-none"
+                   style="color: #0e1395;">
+                        Find Locations
+                </a>
+            </h5>
+
+                <p class="text-secondary mb-0">
+                    Discover hospitals and donation centers where
+                    blood donation is possible.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- Blood Needs -->
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="border rounded-3 p-4 text-center h-100">
+
+                <img src="/media/blood-donation.png"
+                 alt="Blood Needs"
+                 class="img-fluid"
+                 style="height: 55px; width: 55px;">
+
+            <h5 class="mt-3">
+                <a href="{% url 'blood_donation_system_app:urgent' %}"
+                   class="text-decoration-none"
+                   style="color: #0e1395;">
+                        Blood Needs
+                </a>
+            </h5>
+
+                <p class="text-secondary mb-0">
+                    Stay informed about locations where blood is
+                    urgently needed.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Campaigns -->
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="border rounded-3 p-4 text-center h-100">
+
+                <img src="/media/campaign.png"
+                     alt="Campaigns"
+                     class="img-fluid"
+                     style="height: 55px; width: 55px;">
+
+                <h5 class="mt-3">
+                    <a href="{% url 'blood_donation_system_app:campaigns' %}"
+                       class="text-decoration-none"
+                       style="color: #0e1395;">
+                            Blood Campaigns
+                    </a>
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    Discover blood donation campaigns and
+                    community initiatives.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ==================== HOW IT HELPS ==================== -->
+<div class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+
+            <h3 style="color: #0e1395;">
+                How BloodConnect Helps
+            </h3>
+
+            <p class="text-secondary">
+                Making the journey from information to donation simpler.
+            </p>
+
+        </div>
+
+        <div class="row text-center g-4">
+
+            <!-- Step 1 -->
+            <div class="col-12 col-md-4">
+                <div class="p-3">
+
+                    <h2 style="color: #C50000;">
+                        01
+                    </h2>
+
+                    <h5 style="color: #0e1395;">
+                        Discover
+                    </h5>
+
+                    <p class="text-secondary">
+                        Find useful information about blood donation,
+                        eligibility and blood types.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-12 col-md-4">
+                <div class="p-3">
+
+                    <h2 style="color: #C50000;">
+                        02
+                    </h2>
+
+                    <h5 style="color: #0e1395;">
+                        Find
+                    </h5>
+
+                    <p class="text-secondary">
+                        Find donation locations, current blood needs
+                        and upcoming campaigns.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-12 col-md-4">
+                <div class="p-3">
+
+                    <h2 style="color: #C50000;">
+                        03
+                    </h2>
+
+                    <h5 style="color: #0e1395;">
+                        Make a Difference
+                    </h5>
+
+                    <p class="text-secondary">
+                        Take the next step and become part of a
+                        community that helps save lives.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== WHO IS IT FOR ==================== -->
+<div class="container py-5">
+    <div class="row align-items-center">
+
+        <!-- Image -->
+        <div class="col-12 col-md-5 justify-content-center align-items-center text-center">
+
+            <img src="/media/hero.jpg"
+                 alt="Blood donation"
+                 class="img-fluid rounded-3"
+                 style="height: 51vh; width:45vh ; object-fit: cover;">
+
+        </div>
+
+        <!-- Content -->
+        <div class="col-12 col-md-7">
+
+            <!-- Heading -->
+            <div class="text-center mb-4">
+
+                <h3 style="color: #0e1395;">
+                    Who is BloodConnect For?
+                </h3>
+
+            </div>
+
+            <!-- Cards -->
+            <div class="row g-4">
+
+                <!-- Donors -->
+                <div class="col-12">
+
+                    <div class="border rounded-3 p-4">
+
+                        <h4 style="color: #0e1395;">
+                            Blood Donors
+                        </h4>
+
+                        <p class="text-secondary mb-0"
+                           style="line-height: 1.7;">
+                            People who want to learn more about blood donation,
+                            check their eligibility, find donation locations
+                            and discover opportunities to help.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Organizations -->
+                <div class="col-12">
+                    <div class="border rounded-3 p-4">
+
+                        <h4 style="color: #0e1395;">
+                            Donation Organizations
+                        </h4>
+
+                        <p class="text-secondary mb-0"
+                           style="line-height: 1.7;">
+                            Hospitals, blood donation centers and organizations
+                            involved in blood donation activities can provide
+                            important information about locations, needs and
+                            campaigns.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ==================== CALL TO ACTION ==================== -->
+<div class="position-relative">
+
+    <!-- Background Image -->
+    <img src="/media/blue.png"
+         alt="Blood donation"
+         class="img-fluid w-100"
+         style="height: 50vh; object-fit: cover;">
+
+    <!-- Dark Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+         style="background: rgba(0, 0, 0, 0.15);">
+    </div>
+
+    <!-- Content -->
+    <div class="position-absolute text-center"
+         style="left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 700px;">
+
+        <h2 class="text-white mb-3">
+            Ready to Make a Difference?
+        </h2>
+
+        <p class="text-white"
+           style="line-height: 1.7;">
+            Your decision to donate blood can help someone when
+            they need it the most.
+        </p>
+
+        <a href="{% url 'blood_donation_system_app:eligibility' %}"
+           class="btn text-white rounded-3 px-4 py-2"
+           style="background-color: #0e1395;">
+            Check Your Eligibility →
+        </a>
+
+    </div>
+</div>
+{% endblock %}

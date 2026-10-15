@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .hover-button {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-button:hover {
+        box-shadow: 0 5px 15px rgba(14, 19, 149, 0.4);
+    }
+</style>
+
+<div class="campaign py-4"
+     style="background-color: #f8f9fa;">
+    <div class="container">
+
+        <div class="row border bg-white shadow-sm py-5 mx-2 align-items-center">
+
+            <!-- Image -->
+            <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                <img src="{{ campaign.image.url }}"
+                         alt="{{ campaign.title}}"
+                         class="img-fluid rounded-3"
+                         style="height: 65vh; width: 100%; max-width: 380px; object-fit: cover;">
+                </div>
+
+                <!-- Text -->
+                <div class="col-12 col-md-7">
+
+                    <h4 style="color: #C50000;">
+                        {{ campaign.title }}
+                    </h4>
+
+                    {% if campaign.slogan %}
+                        <h6 class="mb-3"
+                                style="color: #C50000;">
+                            <b>{{ campaign.slogan }}</b>
+                        </h6>
+                    {% endif %}
+
+                    <p class="mb-3"
+                        style="color: #0e1395;">
+                        Organizer: <b>{{ campaign.organizer }}</b>
+                    </p>
+
+                    <p class="mb-4">
+                        {{ campaign.description}}
+                    </p>
+
+                    <p class="mb-2">
+                            <b>Time:</b>
+                            {{ campaign.start_time|time:"H:i" }}h –
+                            {{ campaign.end_time|time:"H:i" }}h
+                    </p>
+
+                    <p class="mb-2">
+                        <b>Date:</b>
+                        {% if campaign.date_start == campaign.date_end %}
+                            {{ campaign.date_start|date:"F d, Y" }}
+                        {% else %}
+                            {{ campaign.date_start|date:"F d, Y" }}
+                            -
+                            {{ campaign.date_end|date:"F d, Y" }}
+                        {% endif %}
+                    </p>
+
+                    <p class="mb-2">
+                        <b>Location:</b>
+                        {{ campaign.location }}
+                    </p>
+
+                     <p class="mb-2">
+                        <b>City:</b>
+                        {{ campaign.city }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-3">
+                <a href="{% url 'blood_donation_system_app:campaigns' %}"
+                    class="btn text-white mt-3 text-end hover-button"
+                    style="background-color: #0e1395;">
+                        View All Campaigns →
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
