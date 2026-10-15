@@ -4,4 +4,4 @@
 
 BloodConnect is a Django-based web information system designed to support blood donation by providing donation information, eligibility guidelines, blood donation locations, and urgent blood donation needs.
 
-Technologies: Python, Django, HTML, CSS, Bootstrap.
+**Technologies:** Python, Django, HTML, CSS, Bootstrap.
